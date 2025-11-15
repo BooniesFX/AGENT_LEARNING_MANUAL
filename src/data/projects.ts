@@ -5,7 +5,7 @@ export const researchProjects: ResearchAgentProject[] = [
     id: 'deep-search-agent-demo',
     name: 'DeepSearchAgent-Demo',
     level: 'beginner',
-    repository: 'https://github.com/BooniesFX/DeepSearchAgent-Demo',
+    repository: 'https://github.com/666ghj/DeepSearchAgent-Demo',
     description: '一个入门级的研究Agent演示项目，展示了基本的搜索和研究功能。适合初学者理解Agent的基本概念和实现方式。',
     complexity: 3,
     techStack: ['Python', 'OpenAI API', 'Requests', 'BeautifulSoup'],

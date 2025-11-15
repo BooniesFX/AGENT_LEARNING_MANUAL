@@ -1,57 +1,75 @@
-# React + TypeScript + Vite
+# Research Agent 学习中心：为什么值得做这件事
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 我们为什么创建它
+- AI Agent 学习碎片化：资料分散、术语混乱、示例不可运行，难以形成系统理解。
+- 原型到生产的“鸿沟”：从快速验证到企业级落地，中间缺少清晰路径和对比坐标。
+- 决策缺少依据：面对不同框架和实现，难以回答“为什么选它”“什么时候用它”。
 
-Currently, two official plugins are available:
+## 如何简单启动
+- 安装 Node.js LTS（推荐），确保网络可用。
+- 在项目根目录执行：
+  - `npm install`
+  - `npm run dev`
+- 浏览器访问终端提示的本地地址（通常为 `http://localhost:5173`）。
+- 若仅预览构建产物：
+  - `npm run build` 后执行 `npm run preview`。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Vercel 集成
+- 将仓库连接到 Vercel，新建项目后使用默认静态站点流程：
+  - 构建命令：`npm run build`
+  - 输出目录：`dist`
+- 已配置 `vercel.json` 的 SPA 重写，确保路由在刷新时正确指向 `index.html`。
+- 建议流程：
+  - 主分支自动部署预览，审核后再上生产环境；
+  - 自定义域名与环境变量（如需要）在 Vercel 仪表盘中配置。
 
-## Expanding the ESLint configuration
+## 我们要解决的核心问题
+- 将三个代表性项目（入门原型、递归简洁、企业级 SDK）放在同一坐标系下对比。
+- 用可视化维度（复杂度、安全性、监控、工具生态、性能等）帮助形成统一认知。
+- 提供“能跑起来”的示例与练习，避免只看概念不落地。
+- 建立从基础概念 → 项目对比 → 架构演进 → 交互实践的连续学习路径。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 适合谁
+- 初学者：想快速建立正确的概念地图。
+- 实践者：需要把零散能力组合成可靠工作流。
+- 架构师：关注安全、可观测、扩展与成本的平衡。
+- 团队负责人：希望为落地选择提供清晰的对比与证据。
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 为什么选择这三个项目
+- DeepSearchAgent-Demo：教学友好，结构清晰，理解成本低。
+- deep-research：递归设计与性能优先，适合快速原型与深入探索。
+- Claude Agent SDK：企业级特性、安全权限与 MCP 生态，面向生产环境。
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 为什么强调安全与 MCP 生态
+- 安全是生产的前提：权限（RBAC）、钩子审计、合规与透明是 Agent 必备能力。
+- MCP 标准化集成：统一工具接口与传输协议，降低集成成本，提升生态活力。
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 你将获得什么
+- 一张可导航的认知地图：从“是什么”到“为什么这样做”。
+- 可运行的示例：安全钩子、审计、MCP 工具等最小演示。
+- 对比视角：用统一维度比较不同项目的适用场景与权衡。
+- 学习路径：按阶段组织，从理解到实践逐步升级。
+- 决策参考：在约束与目标之间做出更合理选择。
 
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 学习路线（Why-Oriented）
+1. 核心概念：先理解组成与职责，再谈实现与优化。
+2. 项目对比：把“优缺点”落到具体维度与真实案例上。
+3. 架构演进：从原型到生产，补齐安全、可观测与扩展性。
+4. 交互实践：通过练习巩固所学，形成可复用的工作流。
+
+## 如何使用
+- 打开“核心概念”，选择你关心的模块，理解“为什么需要它”。
+- 进入“项目对比”，观察维度差异与适用场景，找到你的落点。
+- 浏览“架构演进”，理解从简单到复杂的关键补全项（安全/监控/生态）。
+- 在“交互学习”里做练习，把概念变成习惯与能力。
+
+## 我们的更新原则
+- 以“为什么”为第一原则：每个新增内容都明确动机与取舍。
+- 紧跟社区与文档：示例保持可运行，数据定期刷新（包含开源社区统计）。
+- 透明与可持续：持续完善维度、案例与练习，欢迎提出改进建议。
+
+## 如何参与
+- 提交 Issue 告诉我们：你需要的对比维度、真实案例、或学习痛点。
+- 分享你的场景与决策：帮助更多人少走弯路。
+
+—— 让学习不只是“知道怎么做”，更要“知道为什么这样做”。
